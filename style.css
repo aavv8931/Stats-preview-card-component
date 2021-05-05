@@ -1,29 +1,36 @@
-body{
+body {
     background-color: hsl(233, 47%, 7%);
     color: #FFFFFF;
+
 }
+
+@media only screen and (max-width: 1440px) and (min-width: 376px) {
+    body {
+        max-width: 1440px;
+        max-height: 100vh;
+    }
 
 /* Container */
 
-.container{
+.container {
     background-color: hsl(244, 38%, 16%);
     display: flex;
     flex-direction: row;
     width: 1100px;
     height: 446px;
     position: absolute;
-    top: 117px;
+    top: 177px;
     left: 165px;
     border-radius: 8px;
 }
 
 /* Inner Text */
 
-.inner-text{
+.inner-text {
     width: 570px;
 }
 
-h1{
+h1 {
     position: absolute;
     top: 55px;
     left: 72px;
@@ -35,11 +42,11 @@ h1{
     width: 403px;
 }
 
-span{
+span {
     color: hsl(277, 64%, 61%);
 }
 
-p.description{
+p.description {
     position: absolute;
     top: 168px;
     left: 71.5px;
@@ -55,16 +62,16 @@ p.description{
 
 /* Stats */
 
-.stats-companies{
+.stats-companies {
     position: absolute;
     top: 315px;
     left: 71.5px;
     width: 83px;
     height: 56px;
-    mix-blend-mode:normal;
+    mix-blend-mode: normal;
 }
 
-.stats-templates{
+.stats-templates {
     position: absolute;
     top: 315px;
     left: 217.5px;
@@ -72,7 +79,7 @@ p.description{
     height: 56px;
 }
 
-.stats-queries{
+.stats-queries {
     position: absolute;
     top: 315px;
     left: 356.5px;
@@ -80,18 +87,18 @@ p.description{
     height: 56px;
 }
 
-.stats{
+.stats {
     font-size: 24px;
     line-height: 29.05px;
-    font-family: Inter, san-serif;
+    font-family: Inter, sans-serif;
     font-weight: 700;
     height: 29px;
 }
 
-.stats-desc{
+.stats-desc {
     position: absolute;
     top: 40px;
-    font-family: Lexend Deca, san-serif;
+    font-family: Lexend Deca, sans-serif;
     font-size: 12px;
     line-height: 25px;
     letter-spacing: 1px;
@@ -99,11 +106,132 @@ p.description{
     opacity: 0.6;
 }
 
-.inner-img{
+/* Image */
+
+.inner-img {
     width: 540px;
     background: url(images/image-header-desktop.jpg);
     background-blend-mode: multiply;
     opacity: 0.75;
     border-radius: 0 8px 8px 0;
     background-color: #AB5CDB;
+}
+
+.attribution {
+    position: absolute;
+    top: 630px;
+    left: 600px;
+}
+
+}
+@media only screen and (max-width: 375px) {
+    body {
+        background-color: hsl(233, 47%, 7%);
+        color: #FFFFFF;
+        width: 375px;
+        height: 956px;
+    }
+
+    /* Container */
+    .container {
+        background-color: hsl(244, 38%, 16%);
+        width: 327px;
+        height: 780px;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 88px;
+        left: 24px;
+        right: 24px;
+    }
+
+    /* Img Div */
+
+    .inner-img{
+        order: 1;
+        background: url(images/image-header-mobile.jpg);
+        background-size: cover;
+        width: 327px;
+        height: 240px;
+        background-blend-mode: multiply;
+        opacity: 0.75;
+        background-color: #AB5CDB;
+        border-radius: 8px 8px 0 0;
+    }
+
+    /* Text Div */
+    .inner-text{
+       order: 2;
+    }
+
+    h1{
+        font-family: Inter, san-serif;
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 32px;
+        text-align: center;
+        width: 264px;
+        height: 96px;
+        margin: 40px 31.5px 0 31.5px;
+        
+    }
+
+    span{
+        color: hsl(277, 64%, 61%);
+    }
+
+    p.description{
+        font-family: Inter, sans-serif;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 25px;
+        text-align: center;
+        width: 264px;
+        height: 100px;
+        opacity: 0.75;
+        margin: 16px 31.5px 0 31.5px;
+    }
+
+    /* Stats */
+
+    .stats-companies{
+        margin: 40px 31.5px 0 31.5px;
+        width: 264px;
+        height: 56px;
+        text-align: center;
+    }
+
+    .stats-templates, .stats-queries{
+        margin: 24px 31.5px 0 31.5px;
+        width: 264px;
+        height: 56px;
+        text-align: center;
+    }
+
+    .stats{
+        font-family: Inter;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 29.05px;
+        height: 29px;
+        margin-bottom: 5px;
+    }
+
+    .stats-desc{
+        margin-top: 0;
+        text-transform: uppercase;
+        font-size: 12px;
+        line-height: 25px;
+        letter-spacing: 1px;
+        opacity: 0.6;
+        font-family: Inter;
+    }
+
+
+    .attribution{
+        position: absolute;
+        top: 875px;
+        left: 50px;
+    }
+
 }
